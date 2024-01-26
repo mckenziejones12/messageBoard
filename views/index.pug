@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  h2 Welcome to #{title}
+  ul
+    each message in messages
+      li= message.user + ': ' + message.text + ' - ' + message.added 
+    else
+      li There are no values
+  a(href= '/new') New Post
